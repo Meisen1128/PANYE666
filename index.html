@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Message</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #ffe6f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .heart {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            transform: rotate(45deg);
+            animation: float 2s ease-in-out infinite;
+        }
+
+        .heart:before,
+        .heart:after {
+            content: '';
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+        }
+
+        .heart:after {
+            left: 50px;
+        }
+
+        .message {
+            color: #ff1493;
+            font-size: 2em;
+            position: absolute;
+            animation: fadeIn 5s ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translatey(0) rotate(45deg); }
+            50% { transform: translatey(-20px) rotate(45deg); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="heart"></div>
+    <div class="message">潘烨我爱你</div>
+
+    <script>
+        // JavaScript code can be added here for more interactions if needed
+    </script>
+</body>
+</html>
